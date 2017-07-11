@@ -1,5 +1,5 @@
 const fs = require('fs');
-const gm = require('gm');
+const gm = require('gm').subClass({imageMagick: true});
 const path = require('path');
 const express = require('express');
 const fileUpload = require('express-fileupload');

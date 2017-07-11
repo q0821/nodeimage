@@ -1,8 +1,20 @@
-html
+doctype html
+html(lang='')
   head
-    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, shrink-to-fit=no')
+    title Title Page
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    //if lt IE 9
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js')
   body
-    h1= message
-    form(method='POST',action='/send',encType="multipart/form-data")
-      input(type='file', accept='image/*', capture='camera',name='sampleFile')
-      input(type='submit',value='Submit')
+    h1.text-center 選擇圖片上傳
+    form.form-inline.text-center(method='POST',action='/send',encType="multipart/form-data")
+      .form-group.mx-sm-3
+        label(for="sampleFile") 請選擇圖片
+        input.form-control(type='file', accept='image/*', capture='camera',name='sampleFile')
+      button.btn.btn-primary.center-box(type='submit') 送出
+    script(src='https://code.jquery.com/jquery.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
