@@ -1,0 +1,8 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    form(method='POST',action='/send',encType="multipart/form-data")
+      input(type='file', accept='image/*', capture='camera',name='sampleFile')
+      input(type='submit',value='Submit')
